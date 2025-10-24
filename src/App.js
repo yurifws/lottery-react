@@ -12,7 +12,8 @@ class App extends React.Component {
       players: [],
       balance: '',
       value: '',
-      message: ''
+      message: '',
+      lastWinner: ''
     };
   
   async componentDidMount() {
@@ -50,7 +51,9 @@ class App extends React.Component {
       from: accounts[0]
     });
 
-    this.setState({ message: 'A winner has been picked!'});
+    const lastWinner = await lottery.methods.lastWinner().call();
+
+    this.setState({ lastWinner: lastWinner, message: `${lastWinner} has won!`});
     
   };
 

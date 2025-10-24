@@ -1,6 +1,6 @@
 import web3 from './web3';
 
-const address = '0x3394E7B7b1432B50459778cD4E37bCf591Ecee79';
+const address = '0x877e05D981d157E10424e4e723F24e794dce5C88';
 const abi = [
   {
     "inputs": [],
@@ -22,6 +22,19 @@ const abi = [
         "internalType": "address[]",
         "name": "",
         "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "lastWinner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
       }
     ],
     "stateMutability": "view",
